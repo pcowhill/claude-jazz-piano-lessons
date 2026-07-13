@@ -119,7 +119,7 @@ export function ScoreView({ example, currentSlice, showAnalysis, width }: ScoreV
       if (total < available * 0.72) {
         // Stretch modest scores to breathe.
         const scale = Math.min(1.45, (available * 0.94) / total)
-        widths.forEach((w, i) => (widths[i] = w * scale))
+        widths.forEach((_, i) => (widths[i] = widths[i] * scale))
         total = widths.reduce((a, b) => a + b, 0) + firstExtra
       } else if (total > available) {
         const minWidths = measures.map((m) => {
@@ -131,7 +131,7 @@ export function ScoreView({ example, currentSlice, showAnalysis, width }: ScoreV
           const scale = (available - firstExtra) / (total - firstExtra)
           widths.forEach((w, i) => (widths[i] = Math.max(minWidths[i], w * scale)))
         } else {
-          widths.forEach((w, i) => (widths[i] = minWidths[i]))
+          widths.forEach((_, i) => (widths[i] = minWidths[i]))
         }
         total = widths.reduce((a, b) => a + b, 0) + firstExtra
       }
@@ -189,14 +189,14 @@ export function ScoreView({ example, currentSlice, showAnalysis, width }: ScoreV
 
         const voices: Voice[] = []
         const trebleVoices: Voice[] = []
-        const trebleChordVoice = new Voice({ numBeats: measure.beats, beatValue: 4 })
+        const trebleChordVoice = new Voice({ num_beats: measure.beats, beat_value: 4 })
         trebleChordVoice.addTickables(trebleChordNotes)
         trebleVoices.push(trebleChordVoice)
         voices.push(trebleChordVoice)
 
         let melodyVoice: Voice | null = null
         if (measure.melodyStacks.length > 0) {
-          melodyVoice = new Voice({ numBeats: measure.beats, beatValue: 4 })
+          melodyVoice = new Voice({ num_beats: measure.beats, beat_value: 4 })
           melodyVoice.addTickables(melodyNotes)
           trebleVoices.push(melodyVoice)
           voices.push(melodyVoice)
@@ -204,7 +204,7 @@ export function ScoreView({ example, currentSlice, showAnalysis, width }: ScoreV
 
         let bassVoice: Voice | null = null
         if (bass) {
-          bassVoice = new Voice({ numBeats: measure.beats, beatValue: 4 })
+          bassVoice = new Voice({ num_beats: measure.beats, beat_value: 4 })
           bassVoice.addTickables(bassNotes)
           voices.push(bassVoice)
         }

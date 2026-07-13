@@ -138,6 +138,11 @@
   align-items: center;
 }
 
+.reharm-describe {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+}
+
 /* Explorer / custom control areas nested inside panels */
 .panel__custom {
   border: 1px solid var(--border);

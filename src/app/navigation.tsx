@@ -33,10 +33,16 @@ export function useLessonNav(): LessonNavAPI {
 
 const HEADER_OFFSET = 96
 
+function initialHashLesson(): string | null {
+  if (typeof window === 'undefined') return null
+  const hash = window.location.hash.replace(/^#/, '')
+  return LESSONS.some((lesson) => lesson.id === hash) ? hash : null
+}
+
 export function LessonNavProvider({ children }: { children: ReactNode }) {
   const { reducedMotion } = useSettings()
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({})
-  const [activeId, setActiveId] = useState<string | null>(null)
+  const [activeId, setActiveId] = useState<string | null>(initialHashLesson)
   const suppressSpyUntil = useRef(0)
 
   const toggleCollapsed = useCallback((id: string) => {
@@ -106,14 +112,13 @@ export function LessonNavProvider({ children }: { children: ReactNode }) {
     }
   }, [activeId])
 
-  // Deep link: reveal and scroll to the lesson in the initial hash.
+  // Deep link: scroll to the lesson named by the initial hash (sections all
+  // start expanded, so nothing needs revealing — just navigation and focus).
   useEffect(() => {
-    const hash = window.location.hash.replace(/^#/, '')
-    if (!hash || !LESSONS.some((lesson) => lesson.id === hash)) return
-    expand(hash)
+    const hash = initialHashLesson()
+    if (!hash) return
     suppressSpyUntil.current = Date.now() + 1500
-    setActiveId(hash)
-    // Two frames + a settle delay: notation panels shift layout as they mount.
+    // A settle delay: notation panels shift layout as they mount.
     const timer = window.setTimeout(() => {
       const el = document.getElementById(hash)
       if (!el) return
@@ -123,7 +128,6 @@ export function LessonNavProvider({ children }: { children: ReactNode }) {
       heading?.focus({ preventScroll: true })
     }, 250)
     return () => window.clearTimeout(timer)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Listen for manual hash edits / back navigation.

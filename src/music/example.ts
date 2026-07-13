@@ -146,9 +146,10 @@ export interface RenderedExample {
 
 // Practical piano-register bounds used to re-anchor voicings after
 // transposition. Bass stays out of the muddy sub-contra range; treble stays
-// below the glassy extreme top.
+// below the glassy extreme top. (Bass ceiling C4 admits walking scale-tone
+// bass lines; low-cluster mud is prevented by authoring, not clamping.)
 const BASS_MIN = 28 // E1
-const BASS_MAX = 57 // A3
+const BASS_MAX = 60 // C4
 const TREBLE_MIN = 50 // D3
 const TREBLE_MAX = 86 // D6
 

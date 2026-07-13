@@ -142,18 +142,19 @@ export function PlayerProvider({
       const ppq = transport.PPQ
       const draw = Tone.getDraw()
 
-      type PartEvent =
+      type PartEvent = { time: string } & (
         | { kind: 'attack'; attack: Attack }
         | { kind: 'slice'; slice: Slice }
         | { kind: 'end' }
-      const events: [string, PartEvent][] = []
+      )
+      const events: PartEvent[] = []
       for (const attack of request.attacks) {
-        events.push([ticksNotation(attack.startBeats, ppq), { kind: 'attack', attack }])
+        events.push({ time: ticksNotation(attack.startBeats, ppq), kind: 'attack', attack })
       }
       for (const slice of request.slices) {
-        events.push([ticksNotation(slice.startBeats, ppq), { kind: 'slice', slice }])
+        events.push({ time: ticksNotation(slice.startBeats, ppq), kind: 'slice', slice })
       }
-      events.push([ticksNotation(request.totalBeats, ppq), { kind: 'end' }])
+      events.push({ time: ticksNotation(request.totalBeats, ppq), kind: 'end' })
 
       const part = new Tone.Part<PartEvent>((time, event) => {
         if (event.kind === 'attack') {

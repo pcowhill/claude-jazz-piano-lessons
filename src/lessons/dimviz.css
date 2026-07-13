@@ -1,0 +1,48 @@
+.dimviz__layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.dimviz__ring {
+  width: 240px;
+  height: 240px;
+}
+
+.dimviz__node {
+  fill: var(--bg-inset);
+  stroke: var(--border-strong);
+  stroke-width: 1;
+}
+
+.dimviz__node.is-on {
+  fill: var(--accent);
+  stroke: var(--accent-strong);
+  stroke-width: 2;
+}
+
+.dimviz__label {
+  font-size: 11px;
+  fill: var(--text);
+  font-family: var(--font-ui);
+  pointer-events: none;
+}
+
+.dimviz__edge {
+  stroke: var(--accent-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+  opacity: 0.75;
+}
+
+.dimviz__names {
+  font-size: 0.92rem;
+  margin: 0.7rem 0 0.4rem;
+}
+
+.dimviz__note {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+}

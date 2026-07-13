@@ -84,20 +84,22 @@ export function keyboardLayout(low: number, high: number): KeyboardLayout {
 }
 
 /**
- * Pick a display range for an example: cover [minMidi, maxMidi] with a small
- * margin, at least two octaves, expanded to C boundaries where practical.
+ * Pick a display range for an example: cover [minMidi, maxMidi], snapped
+ * outward to keyboard-idiomatic anchors (C or F below, E or B above) and at
+ * least two octaves wide.
  */
 export function rangeForExample(minMidi: number, maxMidi: number): { low: number; high: number } {
-  let low = minMidi - 2
-  let high = maxMidi + 2
-  // Expand down/up to the nearest C for tidy octave labeling.
-  while (((low % 12) + 12) % 12 !== 0 && low > 21) low--
-  while (((high % 12) + 12) % 12 !== 4 && high < 108) high++ // land on an E for a margin above the C
+  const pcAt = (m: number) => ((m % 12) + 12) % 12
+  let low = minMidi
+  let high = maxMidi + 1
+  while (pcAt(low) !== 0 && pcAt(low) !== 5 && low > 21) low--
+  while (pcAt(high) !== 4 && pcAt(high) !== 11 && high < 108) high++
   if (high - low < 24) {
     const deficit = 24 - (high - low)
     low -= Math.floor(deficit / 2)
     high += Math.ceil(deficit / 2)
-    while (((low % 12) + 12) % 12 !== 0 && low > 21) low--
+    while (pcAt(low) !== 0 && pcAt(low) !== 5 && low > 21) low--
+    while (pcAt(high) !== 4 && pcAt(high) !== 11 && high < 108) high++
   }
   return { low: Math.max(21, low), high: Math.min(108, high) }
 }

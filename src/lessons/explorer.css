@@ -1,0 +1,64 @@
+.explorer {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.explorer__row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem 1.1rem;
+  flex-wrap: wrap;
+}
+
+.explorer__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
+.explorer__tensions {
+  border-top: 1px dashed var(--border-strong);
+  padding-top: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.explorer__table {
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.explorer__table th,
+.explorer__table td {
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.7rem;
+  text-align: left;
+}
+
+.explorer__table thead th {
+  background: var(--bg-elevated);
+  font-weight: 600;
+}
+
+.explorer__sounds {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+}
+
+.explorer__cycle {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin: 0.6rem 0 0.2rem;
+  max-width: 78ch;
+}
+
+.explorer__warning {
+  font-size: 0.86rem;
+  color: var(--text);
+  background: var(--warn-soft);
+  border-left: 3px solid var(--warn);
+  border-radius: var(--radius-small);
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem 0 0.1rem;
+  max-width: 78ch;
+}
