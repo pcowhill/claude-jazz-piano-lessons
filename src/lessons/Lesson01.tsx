@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const oneMelodyTwoHarmonies: ExampleSpec = {
+export const oneMelodyTwoHarmonies: ExampleSpec = {
   id: 'l1-one-melody',
   title: 'One melody, two harmonizations',
   listen: 'Keep your ear on the melody — notice how the same notes feel stable or floating as the chords beneath them change.',
@@ -93,7 +93,7 @@ const oneMelodyTwoHarmonies: ExampleSpec = {
   ],
 }
 
-const guideTones251: ExampleSpec = {
+export const guideTones251: ExampleSpec = {
   id: 'l1-guide-tones',
   title: 'ii–V–I: block chords vs. voice-led shells',
   listen: 'Toggle Clear and Jazz: hear the same progression as stacked blocks, then as two quiet inner lines doing all the work.',

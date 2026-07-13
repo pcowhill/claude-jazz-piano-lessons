@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const borrowedIv: ExampleSpec = {
+export const borrowedIv: ExampleSpec = {
   id: 'l6-borrowed-iv',
   title: 'IV brightens, iv sighs: F → Fm6 → C',
   listen: 'The whole story is one voice: A falling to A♭, then settling on G.',
@@ -40,7 +40,7 @@ const borrowedIv: ExampleSpec = {
   ],
 }
 
-const flatSixSeven: ExampleSpec = {
+export const flatSixSeven: ExampleSpec = {
   id: 'l6-flat67',
   title: 'Colors from the parallel minor: ♭VImaj7 and ♭VII7',
   listen: 'Two borrowed chords stride from below back up to the major tonic — dark, cinematic, and entirely inside one key\'s orbit.',

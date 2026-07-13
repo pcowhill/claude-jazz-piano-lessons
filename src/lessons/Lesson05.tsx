@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const subCompare: ExampleSpec = {
+export const subCompare: ExampleSpec = {
   id: 'l5-sub-compare',
   title: 'Same cadence, two dominants: G7 vs. D♭7',
   listen: 'Switch versions mid-listen: the harmonic pull barely changes, but the bass line trades a leap for a chromatic slide.',
@@ -65,7 +65,7 @@ const subCompare: ExampleSpec = {
   ],
 }
 
-const chromaticDescent: ExampleSpec = {
+export const chromaticDescent: ExampleSpec = {
   id: 'l5-descent',
   title: 'Original vs. substituted: a longer progression',
   listen: 'Version two replaces every secondary dominant with its tritone twin — listen to the bass melt into a chromatic descent.',

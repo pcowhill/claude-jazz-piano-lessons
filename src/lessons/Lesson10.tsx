@@ -5,7 +5,7 @@ import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 import { ReharmLab } from './ReharmLab'
 
-const beforeAfter: ExampleSpec = {
+export const beforeAfter: ExampleSpec = {
   id: 'l10-before-after',
   title: 'One melody, before and after',
   listen: 'Learn the plain version first, then switch: every note of the tune survives the renovation.',

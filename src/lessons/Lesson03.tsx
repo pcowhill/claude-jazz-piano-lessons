@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const layering: ExampleSpec = {
+export const layering: ExampleSpec = {
   id: 'l3-layering',
   title: 'Layering a chord: triad → 7th → 9th → 13(♯11)',
   listen: 'Each bar adds one layer of color to the same C major foundation — notice when it stops sounding “plain” and starts sounding “jazz.”',
@@ -41,7 +41,7 @@ const layering: ExampleSpec = {
   ],
 }
 
-const tensions251: ExampleSpec = {
+export const tensions251: ExampleSpec = {
   id: 'l3-tension-251',
   title: 'A tension-rich ii–V–I: Dm11 → G13(♭9) → Cmaj9',
   listen: 'Opens in B♭ — a horn-friendly key — with every chord carrying upper color; the guide tones underneath still do the steering.',

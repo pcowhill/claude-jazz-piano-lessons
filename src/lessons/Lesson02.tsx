@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const diatonicLadder: ExampleSpec = {
+export const diatonicLadder: ExampleSpec = {
   id: 'l2-ladder',
   title: 'The diatonic seventh-chord ladder',
   listen: 'Hear how each chord leans somewhere: some feel like home, some like a doorway, some like a raised eyebrow.',
@@ -27,7 +27,7 @@ const diatonicLadder: ExampleSpec = {
   ],
 }
 
-const oneSixTwoFive: ExampleSpec = {
+export const oneSixTwoFive: ExampleSpec = {
   id: 'l2-1625',
   title: 'I–vi–ii–V–I: the turnaround',
   listen: 'Feel the loop: rest, soft shadow, departure, pull, rest — then flip to Jazz voicing and hear the same loop glide.',

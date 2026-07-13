@@ -7,7 +7,7 @@ import type { ExampleSpec } from '../music/example'
 import { DimCollectionsViz } from './DimCollectionsViz'
 import { UpperStructureExplorer } from './UpperStructureExplorer'
 
-const dominantFamily: ExampleSpec = {
+export const dominantFamily: ExampleSpec = {
   id: 'l8-dominant-family',
   title: 'One diminished sound, four dominants',
   listen: 'The top four notes of every chord here are the same sounding collection — only the bass, the spelling, and the destination change.',
@@ -47,7 +47,7 @@ const dominantFamily: ExampleSpec = {
   ],
 }
 
-const passingDim: ExampleSpec = {
+export const passingDim: ExampleSpec = {
   id: 'l8-passing',
   title: 'Chromatic passing diminished chords',
   listen: 'The bass climbs C–C♯–D–D♯–E; each diminished chord is a moving staircase step, not a destination.',
@@ -87,7 +87,7 @@ const passingDim: ExampleSpec = {
   ],
 }
 
-const commonToneAndPivot: ExampleSpec = {
+export const commonToneAndPivot: ExampleSpec = {
   id: 'l8-ctdim',
   title: 'Common-tone °7 — and the same sound re-aimed',
   listen: 'Version 1: the diminished chord decorates a tonic it never leaves. Version 2: one sounding °7 chord is spelled two ways and sent to two different keys.',
@@ -163,7 +163,7 @@ const commonToneAndPivot: ExampleSpec = {
   ],
 }
 
-const octatonicScales: ExampleSpec = {
+export const octatonicScales: ExampleSpec = {
   id: 'l8-octatonic',
   title: 'Half–whole vs. whole–half: two starting points, one alternation',
   listen: 'Version 1 climbs a half–whole scale over a dominant; version 2 descends a whole–half scale over a °7 chord. Same alternating DNA, different job.',
@@ -282,10 +282,10 @@ export function Lesson08() {
           explanation={
             <p>
               <strong>G7(♭9), B♭7(♭9), D♭7(♭9), and E7(♭9)</strong>. Take any member of
-              B–D–F–A♭ and step a major third down: B→G, D→B♭, F→D♭, A♭→E. The four roots
-              (G, B♭, D♭, E) form a minor-third cycle — a different diminished collection
-              from the one they carry upstairs. Spelling housekeeping: over B♭ the ♭9 is
-              written C♭, and over D♭ it is E♭♭.
+              B–D–F–A♭ and step a major third down: B→G, D→B♭, F→D♭, and A♭ (respelled
+              G♯)→E. The four roots (G, B♭, D♭, E) form a minor-third cycle — a different
+              diminished collection from the one they carry upstairs. Spelling housekeeping:
+              over B♭ the ♭9 is written C♭, and over D♭ it is E♭♭.
             </p>
           }
           options={[

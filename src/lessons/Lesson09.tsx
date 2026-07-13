@@ -50,7 +50,7 @@ function stackChord(
   }
 }
 
-const majorLadder: ExampleSpec = {
+export const majorLadder: ExampleSpec = {
   id: 'l9-major-ladder',
   title: 'The C major sixth-diminished ladder, up and down',
   listen: 'Every step alternates a stable C6 shape with a moving B°7 shape — harmony that climbs a scale without ever leaving home.',
@@ -83,7 +83,7 @@ const majorLadder: ExampleSpec = {
   ],
 }
 
-const minorLadder: ExampleSpec = {
+export const minorLadder: ExampleSpec = {
   id: 'l9-minor-ladder',
   title: 'The C minor sixth-diminished ladder',
   listen: 'Same engine, darker fuel: Cm6 shapes alternate with the very same B°7 — only E changes to E♭.',
@@ -107,7 +107,7 @@ const minorLadder: ExampleSpec = {
   ],
 }
 
-const melodyMovement: ExampleSpec = {
+export const melodyMovement: ExampleSpec = {
   id: 'l9-melody',
   title: 'Harmonizing a line with sixth-diminished movement',
   listen: 'Each melody note gets its full family chord underneath — chord-tone notes get C6, in-between notes get B°7.',
@@ -132,7 +132,7 @@ const melodyMovement: ExampleSpec = {
   ],
 }
 
-const staticVsMoving: ExampleSpec = {
+export const staticVsMoving: ExampleSpec = {
   id: 'l9-static-moving',
   title: 'Static pad vs. sixth-diminished motion',
   listen: 'Version 1 sits on one C6 voicing; version 2 spends the same two bars climbing through the family — same harmony, different amounts of life.',

@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const walkUp: ExampleSpec = {
+export const walkUp: ExampleSpec = {
   id: 'l4-walkup',
   title: 'The borrowed dominant: C – G/B – Am – D7/F♯ – G – G7 – C',
   listen: 'Follow the bass: C, B, A, then F♯ pushing into G — the D7/F♯ borrows dominant urgency without ever leaving C for good.',
@@ -28,9 +28,9 @@ const walkUp: ExampleSpec = {
     }),
     ch({
       beats: 2, sym: ['D', '7', 'F#'], roman: 'V/V', func: 'secondary dominant',
-      bass: 'F#2', treble: 'D3 A3 C4', jbass: 'F#2', jtreble: 'A3 C4 E4',
+      bass: 'F#2', treble: 'D3 A3 C4', jbass: 'F#2', jtreble: 'A3 C4 D4',
       emph: 'C4',
-      note: 'D7 in first inversion. F♯ — foreign to C major — is the 3rd of D7 and a leading tone aimed at G. C natural, kept from the key, is D7\'s ♭7 and falls to B. Jazz voicing adds the 9th (E).',
+      note: 'D7 in first inversion. F♯ — foreign to C major — is the 3rd of D7 and a leading tone aimed at G. C natural, kept from the key, is D7\'s ♭7 and falls to B.',
     }),
     ch({
       beats: 2, sym: ['G', 'maj'], roman: 'V', func: 'dominant',
@@ -53,7 +53,7 @@ const walkUp: ExampleSpec = {
   ],
 }
 
-const chain: ExampleSpec = {
+export const chain: ExampleSpec = {
   id: 'l4-chain',
   title: 'A chain of dominants: V/vi → V/ii → ii–V–I',
   listen: 'Each dominant hands its resolution the baton; the jazz voicing strips everything to guide-tone rails so you hear the chromatic slide C→C♯→D.',

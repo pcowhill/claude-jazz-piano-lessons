@@ -4,7 +4,7 @@ import { Takeaway, SourceChips } from './common'
 import { ch } from './authoring'
 import type { ExampleSpec } from '../music/example'
 
-const cToEflat: ExampleSpec = {
+export const cToEflat: ExampleSpec = {
   id: 'l7-c-to-eb',
   title: 'Sliding from C toward E♭: Fm6 → B♭7(♭9) → E♭',
   listen: 'Three of the four voices never move at the pivot — only C slips down to C♭, and suddenly the music is facing a new tonic.',
@@ -41,7 +41,7 @@ const cToEflat: ExampleSpec = {
   ],
 }
 
-const touristVsMover: ExampleSpec = {
+export const touristVsMover: ExampleSpec = {
   id: 'l7-tourist',
   title: 'Tonicization vs. modulation: a visit and a move',
   listen: 'Version one glances at ii and comes home; version two cadences into F twice and unpacks its bags.',
