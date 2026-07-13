@@ -1,0 +1,153 @@
+.panel {
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-panel);
+  padding: 1rem 1.25rem 0.75rem;
+}
+
+.panel[data-playing] {
+  border-color: var(--accent-strong);
+}
+
+.panel__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.65rem;
+}
+
+.panel__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.panel__title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.panel__listen {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.panel__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.9rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--bg-inset);
+  margin-bottom: 0.75rem;
+}
+
+.field__value {
+  min-width: 2.2ch;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.panel__now {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  min-height: 1.6rem;
+  padding: 0.15rem 0.25rem;
+  font-size: 0.95rem;
+}
+
+.panel__now-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+
+.panel__now strong {
+  font-size: 1.02rem;
+}
+
+.panel__now-roman {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--accent-strong);
+}
+
+.panel__now-func {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+}
+
+.panel__now-idle {
+  color: var(--text-faint);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.panel__analyze {
+  border-top: 1px dashed var(--border-strong);
+  margin-top: 0.6rem;
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.panel__analyze p {
+  max-width: 72ch;
+}
+
+.panel__chord-notes {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.3rem 1rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.panel__chord-note {
+  display: contents;
+}
+
+.panel__chord-notes dt {
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.panel__chord-notes dd {
+  margin: 0;
+}
+
+.panel__chord-comment {
+  display: block;
+  color: var(--text-faint);
+}
+
+.panel__variants {
+  align-items: center;
+}
+
+/* Explorer / custom control areas nested inside panels */
+.panel__custom {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--bg-inset);
+  padding: 0.7rem 0.8rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  align-items: center;
+  font-size: 0.88rem;
+}

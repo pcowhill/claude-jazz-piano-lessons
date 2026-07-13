@@ -1,0 +1,135 @@
+.exercise {
+  margin: 1.75rem 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  padding: 1rem 1.25rem;
+  position: relative;
+}
+
+.exercise__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise__badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  border: 1px solid var(--accent-strong);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+.exercise__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.02rem;
+}
+
+.exercise__prompt {
+  font-size: 0.95rem;
+  max-width: 72ch;
+}
+
+.exercise__listen {
+  margin: 0.35rem 0;
+}
+
+.exercise__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.7rem 0;
+}
+
+.exercise__option {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-small);
+  background: var(--bg);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.exercise__option:hover {
+  background: var(--accent-soft);
+}
+
+.exercise__option.is-correct {
+  border-color: var(--ok);
+  background: var(--ok-soft);
+}
+
+.exercise__option.is-incorrect {
+  border-color: var(--warn);
+  background: var(--warn-soft);
+}
+
+.exercise__option.is-answer {
+  border-color: var(--ok);
+  border-style: dashed;
+}
+
+.exercise__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.exercise__hint {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  border-left: 3px solid var(--border-strong);
+  padding-left: 0.8rem;
+  margin: 0.7rem 0 0.2rem;
+}
+
+.exercise__live {
+  min-height: 0.5rem;
+}
+
+.exercise__feedback {
+  font-size: 0.92rem;
+  margin: 0.7rem 0 0.2rem;
+  font-weight: 500;
+}
+
+.exercise__feedback--correct {
+  color: var(--ok);
+}
+
+.exercise__feedback--incorrect {
+  color: var(--warn);
+}
+
+.exercise__feedback--info {
+  color: var(--text-muted);
+}
+
+.exercise__explanation {
+  border-top: 1px dashed var(--border-strong);
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 72ch;
+}
+
+.exercise__explanation p {
+  margin-bottom: 0.5em;
+}
+
+.exercise__buildbar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 0.6rem 0 0.2rem;
+  flex-wrap: wrap;
+}

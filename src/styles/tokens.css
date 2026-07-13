@@ -1,0 +1,103 @@
+/* Design tokens. Light mode is a warm, paper-like editorial palette; dark
+   mode is an equally considered warm charcoal. Accent stays a restrained
+   slate blue in both. */
+
+:root {
+  color-scheme: light;
+
+  --font-serif: 'Charter', 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-ui:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Code', Menlo, Consolas, monospace;
+
+  --bg: #f7f2e9;
+  --bg-elevated: #fdfaf4;
+  --bg-inset: #efe8db;
+  --bg-header: rgba(247, 242, 233, 0.92);
+  --text: #2c2823;
+  --text-muted: #6b6459;
+  --text-faint: #948c7f;
+  --border: #e0d8c8;
+  --border-strong: #c8bda8;
+
+  --accent: #cfe2f0;
+  --accent-soft: #e3eef7;
+  --accent-strong: #2e6899;
+  --accent-on-dark: #9dc3e6;
+  --emph-ink: #8a5a18;
+  --focus-ring: #2e6899;
+
+  --ok: #2e7d4f;
+  --ok-soft: #ddefe3;
+  --warn: #a05517;
+  --warn-soft: #f7e8d4;
+
+  --score-ink: #35302a;
+
+  --kb-white: #fbf8f2;
+  --kb-border: #b9ae99;
+  --kb-black: #33302b;
+  --kb-black-border: #211f1b;
+  --kb-black-label: #cfc8bc;
+  --key-active: #b5d3ea;
+  --key-active-black: #47759c;
+  --key-active-border: #2e6899;
+  --key-selected: #d9e7f2;
+  --key-selected-black: #3d5a73;
+  --key-selected-border: #487ba6;
+  --key-selected-mark: #2e6899;
+
+  --shadow-panel: 0 1px 2px rgba(60, 50, 30, 0.06), 0 4px 16px rgba(60, 50, 30, 0.07);
+  --shadow-pop: 0 4px 10px rgba(40, 33, 20, 0.12), 0 12px 32px rgba(40, 33, 20, 0.16);
+
+  --radius: 10px;
+  --radius-small: 7px;
+
+  --staff-line: rgba(90, 80, 60, 0.14);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #191a1e;
+  --bg-elevated: #22242a;
+  --bg-inset: #14151a;
+  --bg-header: rgba(25, 26, 30, 0.92);
+  --text: #e6e1d7;
+  --text-muted: #a49d90;
+  --text-faint: #7d7669;
+  --border: #35373f;
+  --border-strong: #4a4d57;
+
+  --accent: #37536b;
+  --accent-soft: #263646;
+  --accent-strong: #92c0e8;
+  --accent-on-dark: #9dc3e6;
+  --emph-ink: #d8a558;
+  --focus-ring: #92c0e8;
+
+  --ok: #7fc79c;
+  --ok-soft: #1f3a2b;
+  --warn: #dfa05c;
+  --warn-soft: #3d2d1a;
+
+  --score-ink: #d8d3c8;
+
+  --kb-white: #d9d4c9;
+  --kb-border: #55504a;
+  --kb-black: #14151a;
+  --kb-black-border: #000;
+  --kb-black-label: #8b8578;
+  --key-active: #4a7ba8;
+  --key-active-black: #5687b4;
+  --key-active-border: #92c0e8;
+  --key-selected: #3c5a72;
+  --key-selected-black: #2e4a63;
+  --key-selected-border: #6fa1c9;
+  --key-selected-mark: #b8d8f2;
+
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 18px rgba(0, 0, 0, 0.35);
+  --shadow-pop: 0 4px 12px rgba(0, 0, 0, 0.5), 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  --staff-line: rgba(220, 210, 190, 0.08);
+}

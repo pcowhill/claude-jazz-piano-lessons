@@ -16,6 +16,7 @@ export type ChordKind =
   | 'maj7'
   | 'maj9'
   | 'maj13'
+  | 'maj13#11'
   | 'add9'
   | 'm7'
   | 'm9'
@@ -30,6 +31,7 @@ export type ChordKind =
   | '7#9'
   | '7#11'
   | '7b13'
+  | '7b9#11'
   | '13b9'
   | '7alt'
   | 'dim7'
@@ -46,6 +48,7 @@ const KIND_TEXT: Record<ChordKind, string> = {
   maj7: 'maj7',
   maj9: 'maj9',
   maj13: 'maj13',
+  'maj13#11': 'maj13(♯11)',
   add9: 'add9',
   m7: 'm7',
   m9: 'm9',
@@ -60,6 +63,7 @@ const KIND_TEXT: Record<ChordKind, string> = {
   '7#9': '7(♯9)',
   '7#11': '7(♯11)',
   '7b13': '7(♭13)',
+  '7b9#11': '7(♭9♯11)',
   '13b9': '13(♭9)',
   '7alt': '7alt',
   dim7: '°7',
